@@ -32,12 +32,20 @@
           <img src="../media/brand/logo-default.png" width="100" height="40" alt="Logo">
         </a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Otvori navigaciju">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Otvori navigaciju">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse text-center" id="navbarNav">
           <ul class="navbar-nav">
+
             <li class="nav-item">
               <a class="nav-link" href="../index.html">
                 Početna
@@ -46,11 +54,20 @@
             </li>
 
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="food.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a
+                class="nav-link dropdown-toggle"
+                href="food.html"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false">
                 Meni
               </a>
 
-              <div class="dropdown-menu text-center text-lg-left" aria-labelledby="navbarDropdown">
+              <div
+                class="dropdown-menu text-center text-lg-left"
+                aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="food.html">Hrana</a>
                 <a class="dropdown-item" href="desserts.html">Deserti</a>
                 <a class="dropdown-item" href="drinks.html">Piće</a>
@@ -78,22 +95,35 @@
             <li class="nav-item">
               <a class="nav-link" href="../en/index.html">EN</a>
             </li>
+
           </ul>
 
           <div class="ml-auto">
-            <a class="nav-social mr-2" href="#" aria-label="Facebook">
+            <a
+              class="nav-social mr-2"
+              href="#"
+              aria-label="Facebook">
               <i class="fa fa-facebook" aria-hidden="true"></i>
             </a>
 
-            <a class="nav-social mr-2" href="#" aria-label="Tripadvisor">
+            <a
+              class="nav-social mr-2"
+              href="#"
+              aria-label="Tripadvisor">
               <i class="fa fa-tripadvisor" aria-hidden="true"></i>
             </a>
 
-            <a class="nav-social mr-2" href="#" aria-label="Instagram">
+            <a
+              class="nav-social mr-2"
+              href="#"
+              aria-label="Instagram">
               <i class="fa fa-instagram" aria-hidden="true"></i>
             </a>
 
-            <a class="nav-social" href="mailto:filipatanasovski87@gmail.com" aria-label="Email">
+            <a
+              class="nav-social"
+              href="mailto:filipatanasovski87@gmail.com"
+              aria-label="Email">
               <i class="fa fa-envelope" aria-hidden="true"></i>
             </a>
           </div>
@@ -105,6 +135,7 @@
 
       <!-- RESERVATIONS DESCRIPTION -->
       <div class="reservations-description container">
+
         <h1 id="title-1" class="special-title-1">
           REZERVACIJE
         </h1>
@@ -117,12 +148,17 @@
           Rezervišite svoj sto popunjavanjem formulara ispod.
           Kontaktiraćemo vas kako bismo potvrdili vašu rezervaciju.
           <br>
-          <strong>Napomena: Sve rezervacije zavise od dostupnosti i smatraju se potvrđenim tek nakon prijema potvrdnog imejla.</strong>
+          <strong>
+            Napomena: Sve rezervacije zavise od dostupnosti i smatraju se
+            potvrđenim tek nakon prijema potvrdnog imejla.
+          </strong>
         </p>
+
       </div>
 
       <!-- RESERVATIONS FORM -->
       <div class="container-fluid reservations-form dark-overlay">
+
         <img
           sizes="(max-width: 2560px) 100vw, 2560px"
           srcset="
@@ -144,15 +180,11 @@
           class="reservations-form-bg">
 
         <!-- FUNCTIONAL RESERVATION FORM -->
-        <form action="https://formsubmit.co/filipatanasovski87@gmail.com" method="POST">
-
-          <!-- FormSubmit configuration -->
-          <input type="hidden" name="_subject" value="Nova rezervacija u restoranu">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="true">
+        <form id="reservationForm">
 
           <!-- NAME + EMAIL -->
           <div class="form-row">
+
             <div class="form-group col-md-6">
               <label for="inputName">
                 IME I PREZIME:
@@ -162,7 +194,7 @@
                 type="text"
                 class="form-control"
                 id="inputName"
-                name="Name"
+                name="name"
                 placeholder="Petar Petrović"
                 required>
             </div>
@@ -176,14 +208,16 @@
                 type="email"
                 class="form-control"
                 id="inputEmail"
-                name="Email"
+                name="email"
                 placeholder="ime@primer.com"
                 required>
             </div>
+
           </div>
 
           <!-- DATE + TIME + PARTY + PHONE -->
           <div class="form-row">
+
             <div class="form-group col-md-4">
               <label for="inputDate">
                 DATUM:
@@ -193,7 +227,7 @@
                 type="date"
                 class="form-control"
                 id="inputDate"
-                name="Date"
+                name="date"
                 required>
             </div>
 
@@ -206,7 +240,7 @@
                 type="time"
                 class="form-control"
                 id="inputTime"
-                name="Time"
+                name="time"
                 required>
             </div>
 
@@ -221,7 +255,7 @@
                 max="50"
                 class="form-control"
                 id="inputNumber"
-                name="Party Size"
+                name="party_size"
                 placeholder="1"
                 required>
             </div>
@@ -235,14 +269,16 @@
                 type="tel"
                 class="form-control"
                 id="inputPhone"
-                name="Phone"
+                name="phone"
                 placeholder="063123456"
                 required>
             </div>
+
           </div>
 
           <!-- MESSAGE -->
           <div class="form-group">
+
             <label for="inputTextarea">
               PORUKA:
             </label>
@@ -250,20 +286,30 @@
             <textarea
               class="form-control"
               id="inputTextarea"
-              name="Message"
+              name="message"
               rows="7"
               placeholder="Dodatne informacije ili posebni zahtevi"></textarea>
+
           </div>
 
+          <!-- STATUS -->
+          <div id="reservationStatus"></div>
+
           <!-- SUBMIT -->
-          <button type="submit" class="btn btn-light">
+          <button
+            type="submit"
+            id="reservationSubmit"
+            class="btn btn-light">
             POŠALJI
           </button>
+
         </form>
+
       </div>
 
       <!-- GOOGLE MAP -->
       <div id="googleMapContainer" class="homepage-google-map">
+
         <iframe
           title="Naša lokacija na Google mapama"
           class="google-map"
@@ -275,68 +321,163 @@
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
+
       </div>
 
     </main>
 
     <!-- FOOTER -->
     <footer class="page-footer">
+
       <div class="container">
+
         <div class="row">
+
           <div class="col-md-3">
-            <h5 class="page-footer-title">RADNO VREME</h5>
-            <p class="mb-0">Otvoreno svakog dana od 8h</p>
-            <p class="mb-0">Bar: Svakog dana od 8h - 00h</p>
-            <p class="mb-0">Doručak: Svakog dana od 8h - 11h</p>
-            <p class="mb-0">Ručak: Svakog dana od 12h - 15h</p>
-            <p>Večera: Svakog dana od 18h - 00h</p>
+
+            <h5 class="page-footer-title">
+              RADNO VREME
+            </h5>
+
+            <p class="mb-0">
+              Otvoreno svakog dana od 8h
+            </p>
+
+            <p class="mb-0">
+              Bar: Svakog dana od 8h - 00h
+            </p>
+
+            <p class="mb-0">
+              Doručak: Svakog dana od 8h - 11h
+            </p>
+
+            <p class="mb-0">
+              Ručak: Svakog dana od 12h - 15h
+            </p>
+
+            <p>
+              Večera: Svakog dana od 18h - 00h
+            </p>
+
           </div>
 
           <div class="col-md-3 h-100 border-left-custom">
-            <h5 class="page-footer-title mt-3 mt-md-0">LOKACIJA</h5>
+
+            <h5 class="page-footer-title mt-3 mt-md-0">
+              LOKACIJA
+            </h5>
+
             <address>
-              District 11  &amp; Brunch Bar<br>
+              District 11 &amp; Brunch Bar<br>
               Pasterova<br>
               14b, Beograd, Srbija<br>
               <abbr title="Telefon">P:</abbr> (+381) 063 555 345<br>
               <abbr title="Imejl">E:</abbr> info@district11.rs
             </address>
+
           </div>
 
           <div class="col-md-3 h-100 border-left-custom">
-            <h5 class="page-footer-title mt-3 mt-md-0">PRATITE NAS</h5>
+
+            <h5 class="page-footer-title mt-3 mt-md-0">
+              PRATITE NAS
+            </h5>
+
             <div class="mb-3">
-              <a class="footer-social" href="https://github.com/PictureElement" aria-label="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-              <a class="footer-social" href="https://github.com/PictureElement" aria-label="tripadvisor"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
-              <a class="footer-social" href="https://github.com/PictureElement" aria-label="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+
+              <a
+                class="footer-social"
+                href="https://github.com/PictureElement"
+                aria-label="facebook">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+
+              <a
+                class="footer-social"
+                href="https://github.com/PictureElement"
+                aria-label="tripadvisor">
+                <i class="fa fa-tripadvisor" aria-hidden="true"></i>
+              </a>
+
+              <a
+                class="footer-social"
+                href="https://github.com/PictureElement"
+                aria-label="instagram">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+
             </div>
+
           </div>
 
           <div class="col-md-3 h-100 border-left-custom">
-            <h5 class="page-footer-title mt-3 mt-md-0">BILTEN</h5>
+
+            <h5 class="page-footer-title mt-3 mt-md-0">
+              BILTEN
+            </h5>
+
             <p>
               Popunite formular kako biste dobijali informacije o najnovijim događajima,
               vestima i posebnim ponudama restorana District 11.
             </p>
 
             <form id="newsletter-form">
-              <label class="sr-only" for="formEmail">Imejl</label>
-              <input type="email" class="form-control form-control-sm rounded" id="formEmail" placeholder="ime@primer.com">
-              <button type="submit" class="btn btn-sm btn-outline-light btn-block mt-2">Prijavi se</button>
+
+              <label class="sr-only" for="formEmail">
+                Imejl
+              </label>
+
+              <input
+                type="email"
+                class="form-control form-control-sm rounded"
+                id="formEmail"
+                placeholder="ime@primer.com">
+
+              <button
+                type="submit"
+                class="btn btn-sm btn-outline-light btn-block mt-2">
+                Prijavi se
+              </button>
+
             </form>
+
           </div>
+
         </div>
+
       </div>
 
       <div class="page-footer-copyright container-fluid text-center">
-        © 2026 District 11 Brunch Bar &amp; Restaurant. Sva prava zadržana.<br>
-        Dizajn i razvoj: <a href="https://pictureelement.github.io/portfolio-2/">PictureElement</a> (Marios Sofokleous) i <a href="https://github.com/FilipAtanasovski-dev">Filip Atanasovski</a>.
+
+        © 2026 District 11 Brunch Bar &amp; Restaurant.
+        Sva prava zadržana.
+        <br>
+
+        Dizajn i razvoj:
+        <a href="https://pictureelement.github.io/portfolio-2/">
+          PictureElement
+        </a>
+        (Marios Sofokleous)
+        i
+        <a href="https://github.com/FilipAtanasovski-dev">
+          Filip Atanasovski
+        </a>.
+
       </div>
+
     </footer>
 
     <!-- BACK TO TOP -->
-    <a id="back-to-top" class="back-to-top smooth-scroll" href="#top">
-      <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+    <a
+      id="back-to-top"
+      class="back-to-top smooth-scroll"
+      href="#top">
+
+      <i
+        class="fa fa-long-arrow-up"
+        aria-hidden="true">
+      </i>
+
     </a>
 
     <!-- jQuery -->
@@ -357,6 +498,85 @@
     <script src="../js/site.js"></script>
 
     <script src="../js/reservations-animations.js"></script>
+
+    <!-- BACKEND RESERVATION API -->
+    <script>
+      document.getElementById("reservationForm").addEventListener("submit", async function (event) {
+
+        event.preventDefault();
+
+        const form = event.target;
+        const button = document.getElementById("reservationSubmit");
+        const status = document.getElementById("reservationStatus");
+
+        const data = {
+          name: document.getElementById("inputName").value.trim(),
+          email: document.getElementById("inputEmail").value.trim(),
+          date: document.getElementById("inputDate").value,
+          time: document.getElementById("inputTime").value,
+          party_size: parseInt(document.getElementById("inputNumber").value, 10),
+          phone: document.getElementById("inputPhone").value.trim(),
+          message: document.getElementById("inputTextarea").value.trim()
+        };
+
+        button.disabled = true;
+        button.textContent = "ŠALJEM...";
+        status.innerHTML = "";
+
+        try {
+
+          const response = await fetch("http://127.0.0.1:8000/api/reservations", {
+            method: "POST",
+
+            headers: {
+              "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify(data)
+          });
+
+          const result = await response.json();
+
+          if (!response.ok) {
+            throw new Error(
+              result.detail ||
+              result.error ||
+              result.message ||
+              "Greška prilikom slanja rezervacije."
+            );
+          }
+
+          status.innerHTML = `
+            <div class="alert alert-success mt-3">
+              Rezervacija je uspešno poslata!
+              Kontaktiraćemo vas radi potvrde.
+            </div>
+          `;
+
+          form.reset();
+
+        } catch (error) {
+
+          console.error("Reservation error:", error);
+
+          status.innerHTML = `
+            <div class="alert alert-danger mt-3">
+              Došlo je do greške prilikom slanja rezervacije.<br>
+              ${error.message}
+            </div>
+          `;
+
+        } finally {
+
+          button.disabled = false;
+          button.textContent = "POŠALJI";
+
+        }
+
+      });
+    </script>
+
+
 
   </body>
 </html>

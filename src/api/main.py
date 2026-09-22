@@ -216,6 +216,35 @@ class Customer(Base):
         nullable=False,
     )
 
+class NewsletterSubscriber(Base):
+
+    __tablename__ = "newsletter_subscribers"
+
+    id = Column(
+        BigInteger,
+        primary_key=True
+    )
+
+    email = Column(
+        String,
+        nullable=False,
+        unique=True,
+        index=True
+    )
+
+    subscribed_at = Column(
+        DateTime(timezone=True),
+        nullable=False
+    )
+
+    active = Column(
+        Boolean,
+        nullable=False
+    )
+
+class NewsletterRequest(BaseModel):
+
+    email: EmailStr
 
 class Reservation(Base):
 
@@ -1122,6 +1151,81 @@ Belgrade, Serbia
         body=body
 
     )
+
+@app.post("/api/newsletter")
+def subscribe_newsletter(
+    request: NewsletterRequest,
+    db: Session = Depends(get_db)
+):
+
+    # Normalize email
+    email = str(request.email).strip().lower()
+
+    # Check whether email already exists
+    subscriber = db.execute(
+        select(NewsletterSubscriber)
+        .where(
+            NewsletterSubscriber.email == email
+        )
+    ).scalar_one_or_none()
+
+    # Already exists
+    if subscriber is not None:
+
+        # If previously unsubscribed,
+        # reactivate the subscription
+        if not subscriber.active:
+
+            subscriber.active = True
+
+            subscriber.subscribed_at = datetime.utcnow()
+
+            try:
+
+                db.commit()
+
+            except Exception:
+
+                db.rollback()
+
+                raise HTTPException(
+                    status_code=500,
+                    detail="Greška prilikom aktiviranja pretplate."
+                )
+
+        return {
+            "success": True,
+            "message": "Email je već prijavljen na newsletter."
+        }
+
+    # Create new subscriber
+    subscriber = NewsletterSubscriber(
+        email=email,
+        subscribed_at=datetime.utcnow(),
+        active=True
+    )
+
+    db.add(subscriber)
+
+    try:
+
+        db.commit()
+
+        db.refresh(subscriber)
+
+    except Exception:
+
+        db.rollback()
+
+        raise HTTPException(
+            status_code=500,
+            detail="Greška prilikom čuvanja email adrese."
+        )
+
+    return {
+        "success": True,
+        "message": "Uspešno ste se prijavili na newsletter."
+    }
 
 
 # =========================================================

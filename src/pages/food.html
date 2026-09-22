@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
-  <head>
+<html lang="sr">
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Grecko Bar &amp; Restaurant | Free Bootstrap Website Template</title>
+    <title>District 11 Brunch Bar &amp; Restaurant | Meni Hrane</title>
     <!-- Web app manifest -->
     <link rel='manifest' href='../manifest.json'>
     <!-- Font Awesome -->
@@ -17,91 +17,113 @@
     <link rel="stylesheet" href="../css/animate.css">
     <!-- Default stylesheet -->
     <link rel="stylesheet" href="../css/main.css">
-  </head>
-  <body id="top">
+    <style>
+        /* RSD prices */
+        .food-price {
+            font-weight: 600;
+            color: #c0392b;
+        }
+        .food-price sup {
+            font-size: 0.6em;
+            top: -0.2em;
+        }
+        .food-price::after {
+            content: " RSD";
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: #888;
+        }
+        .food-category .banner {
+            font-family: 'Fredericka the Great', cursive;
+            letter-spacing: 2px;
+            margin: 0 0 0.5rem 0;
+            text-align: center;
+        }
+        .food-ingredients {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .food-title .food-name {
+            font-weight: 600;
+        }
+        .menu-item {
+            padding: 0.5rem 0;
+        }
+        .food-horizontal-rule {
+            border-top: 1px dashed #ddd;
+            margin: 0.5rem 0;
+        }
+        .food-category {
+            margin-bottom: 2.5rem;
+        }
+
+        /* Category header: title on top, image below, centered, 80% width */
+        .category-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1.25rem;
+        }
+        .category-header img {
+            width: 80%;
+            max-width: 700px;
+            height: 300px;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+        }
+        @media (max-width: 576px) {
+            .category-header img {
+                width: 90%;
+                aspect-ratio: 16 / 10;
+            }
+        }
+    </style>
+</head>
+<body id="top">
     <header>
-      <!-- NAVBAR -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand animated pulse" href="../index.html">
-          <img src="../media/brand/logo-default.png" width="100" height="40" alt="Logo">
-        </a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Otvori navigaciju">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse text-center" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">
-                Početna
-                <span class="sr-only">(trenutna)</span>
-              </a>
-            </li>
-
-            <li class="nav-item dropdown active">
-              <a class="nav-link dropdown-toggle" href="food.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Meni
-              </a>
-
-              <div class="dropdown-menu text-center text-lg-left" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="food.html">Hrana</a>
-                <a class="dropdown-item" href="desserts.html">Deserti</a>
-                <a class="dropdown-item" href="drinks.html">Piće</a>
-              </div>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">O nama</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="album.html">Galerija</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="reservations.html">
-                Rezervacije
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Kontakt</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="../en/index.html">EN</a>
-            </li>
-          </ul>
-
-          <div class="ml-auto">
-            <a class="nav-social mr-2" href="#" aria-label="Facebook">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand animated pulse" href="../index.html">
+                <img src="../media/brand/logo-default.png" width="100" height="40" alt="Logo">
             </a>
-
-            <a class="nav-social mr-2" href="#" aria-label="Tripadvisor">
-              <i class="fa fa-tripadvisor" aria-hidden="true"></i>
-            </a>
-
-            <a class="nav-social mr-2" href="#" aria-label="Instagram">
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
-
-            <a class="nav-social" href="mailto:filipatanasovski87@gmail.com" aria-label="Email">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-      </nav>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Otvori navigaciju">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Početna</a></li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="food.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Meni</a>
+                        <div class="dropdown-menu text-center text-lg-left" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="food.html">Hrana</a>
+                            <a class="dropdown-item" href="desserts.html">Deserti</a>
+                            <a class="dropdown-item" href="drinks.html">Piće</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">O nama</a></li>
+                    <li class="nav-item"><a class="nav-link" href="album.html">Galerija</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reservations.html">Rezervacije</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../en/index.html">EN</a></li>
+                </ul>
+                <div class="ml-auto">
+                    <a class="nav-social mr-2" href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                    <a class="nav-social mr-2" href="#" aria-label="Tripadvisor"><i class="fa fa-tripadvisor"></i></a>
+                    <a class="nav-social mr-2" href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+                    <a class="nav-social" href="mailto:info@district11.rs" aria-label="Email"><i class="fa fa-envelope"></i></a>
+                </div>
+            </div>
+        </nav>
     </header>
-    <main>
 
-      <!-- FOOD: JUMBOTRON -->
-      <div class="jumbotron food-jumbotron dark-overlay text-white">
-        <img
-          sizes="(max-width: 2560px) 100vw, 2560px"
-          srcset="
-            https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_320/v1536008489/website-template-3/cover-food-menu.jpg 320w,
+    <main>
+        <!-- JUMBOTRON -->
+        <div class="jumbotron food-jumbotron dark-overlay text-white">
+            <img sizes="(max-width: 2560px) 100vw, 2560px"
+            srcset="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_320/v1536008489/website-template-3/cover-food-menu.jpg 320w,
             https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_492/v1536008489/website-template-3/cover-food-menu.jpg 492w,
             https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_627/v1536008489/website-template-3/cover-food-menu.jpg 627w,
             https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_743/v1536008489/website-template-3/cover-food-menu.jpg 743w,
@@ -136,1062 +158,1297 @@
             https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_2526/v1536008489/website-template-3/cover-food-menu.jpg 2526w,
             https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_2558/v1536008489/website-template-3/cover-food-menu.jpg 2558w,
             https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_2560/v1536008489/website-template-3/cover-food-menu.jpg 2560w"
-          src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_2560/v1536008489/website-template-3/cover-food-menu.jpg"
-          alt=""
-          class="food-jumbotron-bg">
-        <div class="food-jumbotron-caption container">
-          <h1 id="title-1" class="special-title-2">Food Menu</h1>
-          <div id="menu-icons">
-            <div class="row">
-              <div class="col-3">
-                <a href="#breakfasts" class="smooth-scroll"><img class="menu-icon" src="../media/menu/food/icons/breakfasts.svg" alt="Breakfasts"></a>
-                <h6 class="menu-icon-text mt-3 mb-0">BREAKFASTS</h6>
-              </div>
-              <div class="col-3">
-                <a href="#burgers" class="smooth-scroll"><img class="menu-icon" src="../media/menu/food/icons/burgers.svg" alt="Burgers"></a>
-                <h6 class="menu-icon-text mt-3 mb-0">BURGERS</h6>
-              </div>
-              <div class="col-3">
-                <a href="#flavours-of-serbia" class="smooth-scroll"><img class="menu-icon" src="../media/menu/food/icons/flavours-of-serbia.svg" alt="Flavours of Serbia"></a>
-                <h6 class="menu-icon-text mt-3 mb-0">FLAVOURS OF SERBIA</h6>
-              </div>
-              <div class="col-3">
-                <a href="#from-the-grill" class="smooth-scroll"><img class="menu-icon" src="../media/menu/food/icons/from-the-grill.svg" alt="From the grill"></a>
-                <h6 class="menu-icon-text mt-3 mb-0">FROM THE GRILL</h6>
-              </div>          
+            src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_2560/v1536008489/website-template-3/cover-food-menu.jpg"
+            alt="" class="food-jumbotron-bg">
+            <div class="food-jumbotron-caption container">
+                <h1 id="title-1" class="special-title-2">Meni Hrane</h1>
+                <div id="menu-icons">
+                    <div class="row justify-content-center">
+                        <div class="col-3"><a href="#dorucak" class="smooth-scroll"><img class="menu-icon" src="../media/menu/food/icons/breakfasts.svg" alt="Doručak"></a><h6 class="menu-icon-text mt-3 mb-0">DORUČAK</h6></div>
+                        <div class="col-3"><a href="#predjelo" class="smooth-scroll"><img class="menu-icon" src="../media/menu/food/icons/starters.svg" alt="Predjelo"></a><h6 class="menu-icon-text mt-3 mb-0">PREDJELO</h6></div>
+                        <div class="col-3"><a href="#sendvici" class="smooth-scroll"><img class="menu-icon" src="../media/menu/food/icons/burgers.svg" alt="Sendviči"></a><h6 class="menu-icon-text mt-3 mb-0">SENDVIČI</h6></div>
+                        <div class="col-3"><a href="#salate" class="smooth-scroll"><img class="menu-icon" src="../media/menu/food/icons/salads.svg" alt="Salate"></a><h6 class="menu-icon-text mt-3 mb-0">SALATE</h6></div>
+                    </div>
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-3"><a href="#paste" class="smooth-scroll"><img class="menu-icon" src="../media/menu/food/icons/pasta.svg" alt="Pasta"></a><h6 class="menu-icon-text mt-3 mb-0">PASTE</h6></div>
+                        <div class="col-3"><a href="#rizota" class="smooth-scroll"><img class="menu-icon" src="../media/menu/food/icons/pies.svg" alt="Rizota"></a><h6 class="menu-icon-text mt-3 mb-0">RIZOTA</h6></div>
+                        <div class="col-3"><a href="#corbe" class="smooth-scroll"><img class="menu-icon" src="../media/menu/food/icons/specials.svg" alt="Čorbe"></a><h6 class="menu-icon-text mt-3 mb-0">ČORBE</h6></div>
+                        <div class="col-3"><a href="#alakart" class="smooth-scroll"><img class="menu-icon" src="../media/menu/food/icons/from-the-grill.svg" alt="A la kart"></a><h6 class="menu-icon-text mt-3 mb-0">A LA KART</h6></div>
+                    </div>
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-3"><a href="#rostilj" class="smooth-scroll"><img class="menu-icon" src="../media/menu/food/icons/from-the-grill.svg" alt="Roštilj"></a><h6 class="menu-icon-text mt-3 mb-0">ROŠTILJ</h6></div>
+                        <div class="col-3"><a href="#ribe" class="smooth-scroll"><img class="menu-icon" src="../media/menu/food/icons/seafood.svg" alt="Ribe"></a><h6 class="menu-icon-text mt-3 mb-0">RIBE</h6></div>
+                        <div class="col-3"><a href="#gric" class="smooth-scroll"><img class="menu-icon" src="../media/menu/food/icons/tapa.png" alt="Gric"></a><h6 class="menu-icon-text mt-3 mb-0">GUC &amp; GRIC</h6></div>
+                        <div class="col-3"><a href="#pecivo" class="smooth-scroll"><img class="menu-icon" src="../media/menu/food/icons/pizzas.svg" alt="Pecivo"></a><h6 class="menu-icon-text mt-3 mb-0">PECIVO</h6></div>
+                    </div>
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-3"><a href="#sosevi" class="smooth-scroll"><img class="menu-icon" src="../media/menu/food/icons/sauce.png" alt="Sosevi"></a><h6 class="menu-icon-text mt-3 mb-0">SOSEVI</h6></div>
+                    </div>
+                </div>
             </div>
-            <div class="row mt-5">
-              <div class="col-3">
-                <a href="#pasta" class="smooth-scroll"><img class="menu-icon" src="../media/menu/food/icons/pasta.svg" alt="Pasta"></a>
-                <h6 class="menu-icon-text mt-3 mb-0">PASTA</h6>
-              </div>
-              <div class="col-3">
-                <a href="#pies" class="smooth-scroll"><img class="menu-icon" src="../media/menu/food/icons/pies.svg" alt="Pies"></a>
-                <h6 class="menu-icon-text mt-3 mb-0">PIES</h6>
-              </div>
-              <div class="col-3">
-                <a href="#pizzas" class="smooth-scroll"><img class="menu-icon" src="../media/menu/food/icons/pizzas.svg" alt="Pizzas"></a>
-                <h6 class="menu-icon-text mt-3 mb-0">PIZZAS</h6>
-              </div>
-              <div class="col-3">
-                <a href="#salads" class="smooth-scroll"><img class="menu-icon" src="../media/menu/food/icons/salads.svg" alt="Salads"></a>
-                <h6 class="menu-icon-text mt-3 mb-0">SALADS</h6>
-              </div>
-            </div>
-            <div class="row mt-5">
-              <div class="col-3">
-                <a href="#seafood" class="smooth-scroll"><img class="menu-icon" src="../media/menu/food/icons/seafood.svg" alt="Seafood"></a>
-                <h6 class="menu-icon-text mt-3 mb-0">SEAFOOD</h6>
-              </div>
-              <div class="col-3">
-                <a href="#specials" class="smooth-scroll"><img class="menu-icon" src="../media/menu/food/icons/specials.svg" alt="Specials"></a>
-                <h6 class="menu-icon-text mt-3 mb-0">SPECIALS</h6>
-              </div>
-              <div class="col-3">
-                <a href="#starters" class="smooth-scroll"><img class="menu-icon" src="../media/menu/food/icons/starters.svg" alt="Starters"></a>
-                <h6 class="menu-icon-text mt-3 mb-0">STARTERS</h6>
-              </div>
-              <div class="col-3">
-                <a href="#vegetarian-meals" class="smooth-scroll"><img class="menu-icon" src="../media/menu/food/icons/vegetarian-meals.svg" alt="Vegetarian meals"></a>
-                <h6 class="menu-icon-text mt-3 mb-0">VEGETARIAN MEALS</h6>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- FOOD: DESCRIPTIONS -->
-      <div class="food-descriptions container">
-        
-        <!-- BREAKFASTS -->
-        <div id="breakfasts" class="food-category">
-          <h2 class="banner">BREAKFASTS</h2>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537896174/website-template-3/breakfasts.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537896174/website-template-3/breakfasts.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537896174/website-template-3/breakfasts.jpg 2x"
-                alt="Breakfast"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">ENGLISH BREAKFAST</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537896174/website-template-3/breakfasts.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537896174/website-template-3/breakfasts.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537896174/website-template-3/breakfasts.jpg 2x"
-                alt="Breakfast"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name text-truncate">BOILED EGGS &amp; ASPARAGUS</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537896174/website-template-3/breakfasts.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537896174/website-template-3/breakfasts.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537896174/website-template-3/breakfasts.jpg 2x"
-                alt="Breakfast"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">BANANA PORRIDGE</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
         </div>
 
-        <!-- BURGERS -->
-        <div id="burgers" class="food-category">
-          <h2 class="banner">BURGERS</h2>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537896695/website-template-3/burgers.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537896695/website-template-3/burgers.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537896695/website-template-3/burgers.jpg 2x"
-                alt="Burger"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">HAMBURGER</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537896695/website-template-3/burgers.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537896695/website-template-3/burgers.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537896695/website-template-3/burgers.jpg 2x"
-                alt="Burger"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">CHEESEBURGER</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537896695/website-template-3/burgers.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537896695/website-template-3/burgers.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537896695/website-template-3/burgers.jpg 2x"
-                alt="Burger"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">DOUBLE DECKER</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-        </div>
+        <!-- FOOD DESCRIPTIONS -->
+        <div class="food-descriptions container">
 
-        <!-- FLAVOURS OF CYPRUS -->
-        <div id="flavours-of-serbia" class="food-category">
-          <h2 class="banner">FLAVOURS OF SERBIA</h2>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537896862/website-template-3/flavours-of-cyprus.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537896862/website-template-3/flavours-of-cyprus.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537896862/website-template-3/flavours-of-cyprus.jpg 2x"
-                alt="Flavour of Cyprus"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">MOUSAKA</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537896862/website-template-3/flavours-of-cyprus.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537896862/website-template-3/flavours-of-cyprus.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537896862/website-template-3/flavours-of-cyprus.jpg 2x"
-                alt="Flavour of Cyprus"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">SOUVLAKI</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537896862/website-template-3/flavours-of-cyprus.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537896862/website-template-3/flavours-of-cyprus.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537896862/website-template-3/flavours-of-cyprus.jpg 2x"
-                alt="Flavour of Cyprus"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">STIFADO</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-        </div>
+            <!-- ========== DORUČAK ========== -->
+            <div id="dorucak" class="food-category">
+                <div class="category-header">
+                    <h2 class="banner">DORUČAK</h2>
+                    <img data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537896174/website-template-3/breakfasts.jpg"
+                         data-srcset="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_400/v1537896174/website-template-3/breakfasts.jpg 400w, https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537896174/website-template-3/breakfasts.jpg 800w"
+                         alt="Doručak" class="lazyload">
+                </div>
+                <hr class="food-horizontal-rule">
 
-        <!-- FROM THE GRILL -->
-        <div id="from-the-grill" class="food-category">
-          <h2 class="banner">FROM THE GRILL</h2>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897003/website-template-3/from-the-grill.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897003/website-template-3/from-the-grill.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537897003/website-template-3/from-the-grill.jpg 2x"
-                alt="From the grill"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">T-BONE STEAK</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897003/website-template-3/from-the-grill.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897003/website-template-3/from-the-grill.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537897003/website-template-3/from-the-grill.jpg 2x"
-                alt="From the grill"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">RUMP STEAK</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897003/website-template-3/from-the-grill.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897003/website-template-3/from-the-grill.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537897003/website-template-3/from-the-grill.jpg 2x"
-                alt="From the grill"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">SIRLOIN STEAK</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-        </div>
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title">
+                            <span class="food-name">Caprese Heljda</span>
+                            <span class="food-price float-right">620</span>
+                        </h3>
+                        <p class="food-ingredients">Mozzarela, sušeni paradajz, rukola, ceri, pesto sos</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Przenice</span><span class="food-price float-right">580</span></h3>
+                        <p class="food-ingredients">Šunka, ajvar, kajmak</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Slatke przenice</span><span class="food-price float-right">520</span></h3>
+                        <p class="food-ingredients">Krem, ili džem, ili med</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Kroasan kapri</span><span class="food-price float-right">380</span></h3>
+                        <p class="food-ingredients">Šunka, kačkavalj</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">District kroasan</span><span class="food-price float-right">490</span></h3>
+                        <p class="food-ingredients">Pršut, kozji sir, rukola</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Palenta sa fetom i slaninom</span><span class="food-price float-right">580</span></h3>
+                        <p class="food-ingredients">Palenta, feta sir, slanina, cheri</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Omlet južna pruga</span><span class="food-price float-right">740</span></h3>
+                        <p class="food-ingredients">Jaja, roštiljska kobasica, rukola, paradajz, ljuta paprika, ajvar, feta</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Omlet šunka</span><span class="food-price float-right">610</span></h3>
+                        <p class="food-ingredients">Jaja, šunka, ementaler, rukola, paradajz, paprika, feta</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Vege omlet</span><span class="food-price float-right">610</span></h3>
+                        <p class="food-ingredients">Jaja, šampinjoni, šitake pečurke, rukola, paradajz, paprika</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Omlet District</span><span class="food-price float-right">990</span></h3>
+                        <p class="food-ingredients">Jaja, pršuta, mozzarela, rukola, paradajz, paprika, feta</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Proteinski omlet</span><span class="food-price float-right">880</span></h3>
+                        <p class="food-ingredients">Jaja, mozzarela, baby spinach, rukola, paradajz, paprika, feta</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Rustik omlet</span><span class="food-price float-right">720</span></h3>
+                        <p class="food-ingredients">Jaja, pita hleb, roštiljska kob., urnebes dip</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Distrikt doručak</span><span class="food-price float-right">780</span></h3>
+                        <p class="food-ingredients">Jaja, kobasica, poh. kač., rukola, paradajz, paprika, feta, ajvar</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Omlet Monte Kristo</span><span class="food-price float-right">710</span></h3>
+                        <p class="food-ingredients">Jaja, slanina, chedar, tost hleb, mix salata, cezar dres, cheri</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Biftek jaja na rustičan način</span><span class="food-price float-right">1320</span></h3>
+                        <p class="food-ingredients">Jaja, biftek, tost hleb, cheri, rukola</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Granola</span><span class="food-price float-right">580</span></h3>
+                        <p class="food-ingredients">Granola, grčki jogurt, borovnice, džem od maline, list badem</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Omlet (kajgana)</span><span class="food-price float-right">420</span></h3>
+                        <p class="food-ingredients">3 jaja, prilog feta, paradajz, rukola</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Jaje na oko</span><span class="food-price float-right">420</span></h3>
+                        <p class="food-ingredients">3 jaja, prilog feta, paradajz, rukola</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
 
-        <!-- PASTA -->
-        <div id="pasta" class="food-category">
-          <h2 class="banner">PASTA</h2>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897119/website-template-3/pasta.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897119/website-template-3/pasta.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537897119/website-template-3/pasta.jpg 2x"
-                alt="Pasta"
-                class="rounded-circle lazyload">
+                <h4 class="mt-4 mb-3" style="font-size:1.2rem; font-weight:600; color:#2c3e50;">Dodaci slani</h4>
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><span class="food-name">Šunka 40gr</span><span class="food-price float-right">95</span></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><span class="food-name">Slanina 40gr</span><span class="food-price float-right">110</span></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><span class="food-name">Kulen 40gr</span><span class="food-price float-right">130</span></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><span class="food-name">Pršut 40gr</span><span class="food-price float-right">160</span></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><span class="food-name">Pečenica 40gr</span><span class="food-price float-right">130</span></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><span class="food-name">Kajmak 30gr</span><span class="food-price float-right">140</span></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><span class="food-name">Ajvar 30gr</span><span class="food-price float-right">110</span></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><span class="food-name">Kačkavalj 30gr</span><span class="food-price float-right">110</span></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><span class="food-name">Feta sir 60gr</span><span class="food-price float-right">120</span></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><span class="food-name">Jaje komad</span><span class="food-price float-right">80</span></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><span class="food-name">Povrće 50gr</span><span class="food-price float-right">130</span></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><span class="food-name">Pečurke 30gr</span><span class="food-price float-right">120</span></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><span class="food-name">Vrat 40gr</span><span class="food-price float-right">130</span></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><span class="food-name">Roštiljska kobasica</span><span class="food-price float-right">180</span></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><span class="food-name">Kobasica kačkavalj</span><span class="food-price float-right">240</span></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><span class="food-name">Jogurt 0.2</span><span class="food-price float-right">130</span></div>
+                </div>
+                <hr class="food-horizontal-rule">
             </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">SPAGHETTI BOLOGNESE</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897119/website-template-3/pasta.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897119/website-template-3/pasta.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537897119/website-template-3/pasta.jpg 2x"
-                alt="Pasta"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">BEEF STROGANOFF</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897119/website-template-3/pasta.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897119/website-template-3/pasta.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537897119/website-template-3/pasta.jpg 2x"
-                alt="Pasta"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">FETTUCINE ALFREDO</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-        </div>
 
-        <!-- PIES -->
-        <div id="pies" class="food-category">
-          <h2 class="banner">PIES</h2>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897297/website-template-3/pies.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897297/website-template-3/pies.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537897297/website-template-3/pies.jpg 2x"
-                alt="Pie"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">STEAK &amp; KIDNEY PIE</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897297/website-template-3/pies.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897297/website-template-3/pies.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537897297/website-template-3/pies.jpg 2x"
-                alt="Pie"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">STEAK &amp; ALE PIE</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897297/website-template-3/pies.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897297/website-template-3/pies.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537897297/website-template-3/pies.jpg 2x"
-                alt="Pie"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">CHICKEN &amp; MUSHROOM PIE</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-        </div>
+            <!-- ========== PREDJELO ========== -->
+            <div id="predjelo" class="food-category">
+                <div class="category-header">
+                    <h2 class="banner">PREDJELO</h2>
+                    <img data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537898228/website-template-3/starters.jpg"
+                         data-srcset="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_400/v1537898228/website-template-3/starters.jpg 400w, https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537898228/website-template-3/starters.jpg 800w"
+                         alt="Predjelo" class="lazyload">
+                </div>
+                <hr class="food-horizontal-rule">
 
-        <!-- PIZZAS -->
-        <div id="pizzas" class="food-category">
-          <h2 class="banner">PIZZAS</h2>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897508/website-template-3/pizzas.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897508/website-template-3/pizzas.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537897508/website-template-3/pizzas.jpg 2x"
-                alt="Pizza"
-                class="rounded-circle lazyload">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><h3 class="food-title"><span class="food-name">Pršut goveđi 100 gr</span><span class="food-price float-right">840</span></h3></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><h3 class="food-title"><span class="food-name">Pršut 100 gr</span><span class="food-price float-right">740</span></h3></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><h3 class="food-title"><span class="food-name">Sjenički sir 100 gr</span><span class="food-price float-right">480</span></h3></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><h3 class="food-title"><span class="food-name">Kozji sir 100 gr</span><span class="food-price float-right">540</span></h3></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Plato sireva - 300 gr</span><span class="food-price float-right">1600</span></h3>
+                        <p class="food-ingredients">Ementaler, gauda, dimljeni sir, feta, sjenički sir, masline, nacos, sušeno povrće</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Plato suhomesnatog - 300 gr</span><span class="food-price float-right">1900</span></h3>
+                        <p class="food-ingredients">Pršut, kulen, pečenica, suvi vrat, panceta, masline, nacos, dip</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Plato Mix - 300 gr</span><span class="food-price float-right">1800</span></h3>
+                        <p class="food-ingredients">Mix sireva i suhomesnatog, masline, nacos, dip</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Plato Mix Premium - 400 gr</span><span class="food-price float-right">4200</span></h3>
+                        <p class="food-ingredients">Prolećne rolnice, dimljeni sir, gauda, parmezan, bri, kozji sir, plavi sir, njeguški pršut, pečenica, suvi vrat, biber salama, franc. kobasica, pinakt namaz, sirni namaz</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Brusketi Toskana</span><span class="food-price float-right">710</span></h3>
+                        <p class="food-ingredients">Pesto, pršut, paradajz, mocarela, masl. lola rosa, lola bjonda, rukola, cheri</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Brusketi Caprese</span><span class="food-price float-right">650</span></h3>
+                        <p class="food-ingredients">Pesto, paradajz, mocarela, masline lola rosa, lola bjonda, rukola, cheri</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Gvakamoli tost</span><span class="food-price float-right">830</span></h3>
+                        <p class="food-ingredients">Gvakamoli, feta, nar + lola rosa, lola bjonda, rukola, cheri</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Chevre rolnice</span><span class="food-price float-right">890</span></h3>
+                        <p class="food-ingredients">Kozji sir, b.spanac, badem + lola rosa, lola bjonda, rukola, cheri</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Napoleon rolnice (heljdine kore)</span><span class="food-price float-right">980</span></h3>
+                        <p class="food-ingredients">Biftek, sus. paradajz, bree sir + lola rosa, lola bjonda, rukola, cheri</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Kis loren - slanina (francuska pita)</span><span class="food-price float-right">750</span></h3>
+                        <p class="food-ingredients">Lola rosa, lola bjonda, rukola, cheri</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Kis loren - praziluk</span><span class="food-price float-right">700</span></h3>
+                        <p class="food-ingredients">Lola rosa, lola bjonda, rukola, cheri</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Pohovani kačkavalj sa slaninom</span><span class="food-price float-right">740</span></h3>
+                        <p class="food-ingredients">Kačkavalj, tartar sos, paradajz</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Grilovani kozji sir 100 gr</span><span class="food-price float-right">740</span></h3>
+                        <p class="food-ingredients">Kozji sir, rukola, ceri, toping</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Trikolore rolnice / Spring rolls</span><span class="food-price float-right">650</span></h3>
+                        <p class="food-ingredients">8 komada rolnice, sweet chilli sos, rukola</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Grilovano povrće 150gr</span><span class="food-price float-right">440</span></h3>
+                        <p class="food-ingredients">Plavi patl, tikvica, paprika, luk, paradajz, šampinjoni</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Pinsa Margarita</span><span class="food-price float-right">880</span></h3>
+                        <p class="food-ingredients">Pelat, mozzarela, ementaler</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Pinsa Pikante Margarita</span><span class="food-price float-right">1200</span></h3>
+                        <p class="food-ingredients">Pelat, mozzarela, ementaler, nduja, kulen</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Pinsa Toskana</span><span class="food-price float-right">1400</span></h3>
+                        <p class="food-ingredients">Pelat, mozzarela, ementaler, pršuta, rukola, cheri</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Pinsa Capricciosa</span><span class="food-price float-right">1250</span></h3>
+                        <p class="food-ingredients">Pelat, šunka, šampinjoni, ementaler</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Jutarnja Pinsa</span><span class="food-price float-right">1200</span></h3>
+                        <p class="food-ingredients">Feta krem, gauda, panceta, jaja, rukola, cili med, maslinovo ulje</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
             </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">PEPPERONI</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897508/website-template-3/pizzas.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897508/website-template-3/pizzas.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537897508/website-template-3/pizzas.jpg 2x"
-                alt="Pizza"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">MARGARITA</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897508/website-template-3/pizzas.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897508/website-template-3/pizzas.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537897508/website-template-3/pizzas.jpg 2x"
-                alt="Pizza"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">TROPICANO</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-        </div>
 
-        <!-- SALADS -->
-        <div id="salads" class="food-category">
-          <h2 class="banner">SALADS</h2>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897626/website-template-3/salads.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897626/website-template-3/salads.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537897626/website-template-3/salads.jpg 2x"
-                alt="Salad"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">EGG SALAD</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897626/website-template-3/salads.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897626/website-template-3/salads.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537897626/website-template-3/salads.jpg 2x"
-                alt="Salad"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">POTATO SALAD</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897626/website-template-3/salads.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897626/website-template-3/salads.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537897626/website-template-3/salads.jpg 2x"
-                alt="Salad"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">POMEGRANATE SALAD</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-        </div>
+            <!-- ========== SENDVIČI, BURGERI I BURITA ========== -->
+            <div id="sendvici" class="food-category">
+                <div class="category-header">
+                    <h2 class="banner">SENDVIČI, BURGERI I BURITA</h2>
+                    <img data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537896695/website-template-3/burgers.jpg"
+                         data-srcset="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_400/v1537896695/website-template-3/burgers.jpg 400w, https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537896695/website-template-3/burgers.jpg 800w"
+                         alt="Sendviči" class="lazyload">
+                </div>
+                <hr class="food-horizontal-rule">
 
-        <!-- SEAFOOD -->
-        <div id="seafood" class="food-category">
-          <h2 class="banner">SEAFOOD</h2>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897973/website-template-3/seafood.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897973/website-template-3/seafood.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537897973/website-template-3/seafood.jpg 2x"
-                alt="Seafood"
-                class="rounded-circle lazyload">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Klub sendvič Klasik</span><span class="food-price float-right">690</span></h3>
+                        <p class="food-ingredients">Majonez, šunka, lola rosa, lola bjonda, rukola, paradajz, 1 jaje na oko, 2 lista panceta, pomfrit</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Klub sendvič Šefa kuhinje</span><span class="food-price float-right">730</span></h3>
+                        <p class="food-ingredients">Majonez, piletina, lola rosa, lola bjonda, rukola, paradajz, 1 jaje na oko, 2 lista panceta, pomfrit</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Klub sendvič Toskana</span><span class="food-price float-right">890</span></h3>
+                        <p class="food-ingredients">Pršuta, mozzarela, rukola, paradajz, pavlaka, pesto, pomfrit</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Tunjevina sendvič</span><span class="food-price float-right">630</span></h3>
+                        <p class="food-ingredients">Tost, tunjevina, zelena s., gvakamole sos, kukuruz, paradajz, pomfrit</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Lava Burger</span><span class="food-price float-right">1280</span></h3>
+                        <p class="food-ingredients">Pljeskavica 150gr, majonez, lola bjonda, lola rosa, rukola, ukiseljeni crveni luk, paradajz, 2 lista panceta, chedar sir</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Chicken Burger</span><span class="food-price float-right">1160</span></h3>
+                        <p class="food-ingredients">Pohovana piletina 150gr, cezar dressing, ajzberg, paradajz, 2 lista panceta, parmezan, pomfrit</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Feta Burger</span><span class="food-price float-right">1220</span></h3>
+                        <p class="food-ingredients">Pljeskavica 150gr, feta, paradajz, ajzberg, onion ring, ceri</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Pileći Burito</span><span class="food-price float-right">940</span></h3>
+                        <p class="food-ingredients">Cezar dressing, ajzberg salata, piletina, cheri, parmezan + pomfrit</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Veggie Burito</span><span class="food-price float-right">860</span></h3>
+                        <p class="food-ingredients">Runch dressing, crveni pirinač, kukuruz, paprika, šampinjoni, tikvica, patli, lola bjonda, lola rosa, rukola, pomfrit</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Beef Burito</span><span class="food-price float-right">1340</span></h3>
+                        <p class="food-ingredients">Biftek žilijen, mix salata, biftek dress, chedar, pomfrit, kis. krast, kecap</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
             </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">GRILLED OCTOPUS</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897973/website-template-3/seafood.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897973/website-template-3/seafood.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537897973/website-template-3/seafood.jpg 2x"
-                alt="Seafood"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">FRIED SHRIMP &amp; SQUID</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897973/website-template-3/seafood.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537897973/website-template-3/seafood.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537897973/website-template-3/seafood.jpg 2x"
-                alt="Seafood"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">BAKED SALMON</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-        </div>
 
-        <!-- SPECIALS -->
-        <div id="specials" class="food-category">
-          <h2 class="banner">SPECIALS</h2>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537898110/website-template-3/specials.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537898110/website-template-3/specials.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537898110/website-template-3/specials.jpg 2x"
-                alt="Special"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">EGGS ROYALE</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537898110/website-template-3/specials.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537898110/website-template-3/specials.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537898110/website-template-3/specials.jpg 2x"
-                alt="Special"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">SMOKED SALMON CRISPS</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537898110/website-template-3/specials.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537898110/website-template-3/specials.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537898110/website-template-3/specials.jpg 2x"
-                alt="Special"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">BRAISED SHORT RIBS</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-        </div>
+            <!-- ========== SALATE ========== -->
+            <div id="salate" class="food-category">
+                <div class="category-header">
+                    <h2 class="banner">SALATE</h2>
+                    <img data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537897626/website-template-3/salads.jpg"
+                         data-srcset="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_400/v1537897626/website-template-3/salads.jpg 400w, https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537897626/website-template-3/salads.jpg 800w"
+                         alt="Salate" class="lazyload">
+                </div>
+                <hr class="food-horizontal-rule">
 
-        <!-- STARTERS -->
-        <div id="starters" class="food-category">
-          <h2 class="banner">STARTERS</h2>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537898228/website-template-3/starters.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537898228/website-template-3/starters.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537898228/website-template-3/starters.jpg 2x"
-                alt="Starter"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">PRAWN COCKTAIL</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537898228/website-template-3/starters.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537898228/website-template-3/starters.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537898228/website-template-3/starters.jpg 2x"
-                alt="Starter"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">FRIED MOZZARELLA STICKS</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537898228/website-template-3/starters.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537898228/website-template-3/starters.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537898228/website-template-3/starters.jpg 2x"
-                alt="Starter"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">GARLIC BREAD</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-        </div>
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Zelena</span><span class="food-price float-right">330</span></h3>
+                        <p class="food-ingredients">Lola rosa, lola bjonda, ajzberg, rukola</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Paradajz sa sirom</span><span class="food-price float-right">490</span></h3>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Krastavac</span><span class="food-price float-right">390</span></h3>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Šopska</span><span class="food-price float-right">490</span></h3>
+                        <p class="food-ingredients">Crni luk, paprika, paradajz, krastavac, feta</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Kupus</span><span class="food-price float-right">410</span></h3>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Grčka salata</span><span class="food-price float-right">640</span></h3>
+                        <p class="food-ingredients">Paradajz, feta, masline, krastavac, crveni luk</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Rukola</span><span class="food-price float-right">820</span></h3>
+                        <p class="food-ingredients">Pinjoli, rukola, ceri, parmezan</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Srpska</span><span class="food-price float-right">490</span></h3>
+                        <p class="food-ingredients">Paprika, krastavac, paradajz, ljuta paprika</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Pečena ljuta</span><span class="food-price float-right">180</span></h3>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Kiseli kupus</span><span class="food-price float-right">440</span></h3>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Tursija</span><span class="food-price float-right">470</span></h3>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
 
-        <!-- VEGETARIAN MEALS -->
-        <div id="vegetarian-meals" class="food-category">
-          <h2 class="banner">VEGETARIAN MEALS</h2>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537898377/website-template-3/vegetarian-meals.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537898377/website-template-3/vegetarian-meals.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537898377/website-template-3/vegetarian-meals.jpg 2x"
-                alt="Vegetarian meal"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">VEGGIE BURGER</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537898377/website-template-3/vegetarian-meals.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537898377/website-template-3/vegetarian-meals.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537898377/website-template-3/vegetarian-meals.jpg 2x"
-                alt="Vegetarian meal"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">COURGETTE CARPACCIO</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-          <hr class="food-horizontal-rule">
-          <div class="row align-items-center menu-item">
-            <div class="col-md-3 food-image">
-              <img 
-                data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537898377/website-template-3/vegetarian-meals.jpg"
-                data-srcset="
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537898377/website-template-3/vegetarian-meals.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537898377/website-template-3/vegetarian-meals.jpg 2x"
-                alt="Vegetarian meal"
-                class="rounded-circle lazyload">
-            </div>
-            <div class="col-md-9">
-              <h3 class="food-title">
-                <span class="food-name">MUSHROOM RISOTTO</span>
-                <span class="food-price float-right">$5.<sup>95</sup></span>
-              </h3>
-              <p class="food-ingredients">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam 
-                at gravida lacus. Suspendisse laoreet ultrices ex, quis 
-                efficitur justo rhoncus sit amet.
-              </p>
-            </div>
-          </div>
-        </div>
+                <h4 class="mt-4 mb-3" style="font-size:1.2rem; font-weight:600; color:#2c3e50;">OBROK SALATE</h4>
 
-      </div>
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Meksička salata</span><span class="food-price float-right">1250</span></h3>
+                        <p class="food-ingredients">Lola rosa, lola bjonda, rukola, cheri, kukuruz, pasulj, grilovana piletina 100gr, fusili 80gr</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Sitake salata / Funghi salata</span><span class="food-price float-right">1180</span></h3>
+                        <p class="food-ingredients">Lola rosa, lola bjonda, rukola, cheri, sitake pečurke, krutoni gr, susam</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Biftek Salata</span><span class="food-price float-right">1690</span></h3>
+                        <p class="food-ingredients">Biftek, mix salata, parmezan, krutoni, biftek dress, cheri</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Cobb salata</span><span class="food-price float-right">1150</span></h3>
+                        <p class="food-ingredients">Ajzberg, 1 jaje, cheri, feta, avokado, panceta, piletina</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Salata od tunjevine</span><span class="food-price float-right">980</span></h3>
+                        <p class="food-ingredients">Tunjevina, krompir, beli luk, preliv, paradajz, zelena salata, kukuruz</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Cezar</span><span class="food-price float-right">1090</span></h3>
+                        <p class="food-ingredients">Iceberg, piletina, slanina, tost, preliv, paradajz</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+            </div>
 
-<!-- GOOGLE MAP -->
-<div id="googleMapContainer" class="homepage-google-map">
-  <iframe
-    title="Our location on Google Maps"
-    class="google-map"
-    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d471.4857047025106!2d20.46504975893008!3d44.79768249212041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2srs!4v1786375646944!5m2!1sen!2srs"
-    width="100%"
-    height="450"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</div>
+            <!-- ========== PASTE ========== -->
+            <div id="paste" class="food-category">
+                <div class="category-header">
+                    <h2 class="banner">PASTE</h2>
+                    <img data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537897119/website-template-3/pasta.jpg"
+                         data-srcset="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_400/v1537897119/website-template-3/pasta.jpg 400w, https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537897119/website-template-3/pasta.jpg 800w"
+                         alt="Paste" class="lazyload">
+                </div>
+                <hr class="food-horizontal-rule">
 
-    </main>
-    <footer class="page-footer">
-      <div class="container">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Pasta karbonara</span><span class="food-price float-right">1090</span></h3>
+                        <p class="food-ingredients">Taljatele, slanina, jaja, neutralna pavlaka, parmezan, kačkavalj</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Pasta sicilijana</span><span class="food-price float-right">1160</span></h3>
+                        <p class="food-ingredients">Fusili, pesto sos, pršuta, sušeni paradajz, masline</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Fusili pomodoro</span><span class="food-price float-right">1040</span></h3>
+                        <p class="food-ingredients">4 vrste paradajza, pelat, sušeni paradajz, cheri, domaći paradajz</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Taljatele District</span><span class="food-price float-right">1190</span></h3>
+                        <p class="food-ingredients">Taljatele, vrganj, slanina, beli i crni luk, belo vino, pas. paradajz</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Fusili 4 vrste sira</span><span class="food-price float-right">1120</span></h3>
+                        <p class="food-ingredients">Gouda / ementaler, mozzarela, gorgonzola, parmezan</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">District Specijal</span><span class="food-price float-right">1290</span></h3>
+                        <p class="food-ingredients">Fusili, pesto sos, neutralna pavlaka, badem, kačkavalj, piletina</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+            </div>
+
+            <!-- ========== RIZOTA ========== -->
+            <div id="rizota" class="food-category">
+                <div class="category-header">
+                    <h2 class="banner">RIZOTA</h2>
+                    <img data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537897297/website-template-3/pies.jpg"
+                         data-srcset="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_400/v1537897297/website-template-3/pies.jpg 400w, https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537897297/website-template-3/pies.jpg 800w"
+                         alt="Rizota" class="lazyload">
+                </div>
+                <hr class="food-horizontal-rule">
+
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Rizoto sa piletinom u kremastom kari sosu</span><span class="food-price float-right">1280</span></h3>
+                        <p class="food-ingredients">Piletina, paradajz, tikvica, šargarepa, pečurke, neut. pavlaka, kačkavalj, kari</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Rizoto Funghi</span><span class="food-price float-right">1240</span></h3>
+                        <p class="food-ingredients">Šampinjoni, sitake, ulje od tartufa</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Rizoto od povrća</span><span class="food-price float-right">1180</span></h3>
+                        <p class="food-ingredients">Pirinač, crvena paprika, šampinjoni, tikvice, plavi patl, pelat</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Rizoto District</span><span class="food-price float-right">1680</span></h3>
+                        <p class="food-ingredients">Biftek, pirinač, tikvice, paprika, šampinjoni, vrganji, soya, neut. pavlaka, parmezan</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Rizoto Arancini</span><span class="food-price float-right">1240</span></h3>
+                        <p class="food-ingredients">Pirinač, patl, paprika, pečurke, mozzarela, pršut</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Rizoto Adriatic</span><span class="food-price float-right">1380</span></h3>
+                        <p class="food-ingredients">Pirinač, morski mix</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+            </div>
+
+            <!-- ========== ČORBE ========== -->
+            <div id="corbe" class="food-category">
+                <div class="category-header">
+                    <h2 class="banner">ČORBE</h2>
+                    <img data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537898110/website-template-3/specials.jpg"
+                         data-srcset="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_400/v1537898110/website-template-3/specials.jpg 400w, https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537898110/website-template-3/specials.jpg 800w"
+                         alt="Čorbe" class="lazyload">
+                </div>
+                <hr class="food-horizontal-rule">
+
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Teleća Ragu Čorba</span><span class="food-price float-right">610</span></h3>
+                        <p class="food-ingredients">Teleće meso, šargarepa, crni luk, celer, brašno</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Potaž dana</span><span class="food-price float-right">490</span></h3>
+                        <p class="food-ingredients">Potaž dana, neutralna pavlaka</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Paradajz čorba</span><span class="food-price float-right">610</span></h3>
+                        <p class="food-ingredients">Šećerac, slanina, parmezan</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+            </div>
+
+            <!-- ========== A LA KART ========== -->
+            <div id="alakart" class="food-category">
+                <div class="category-header">
+                    <h2 class="banner">A LA KART</h2>
+                    <img data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537897003/website-template-3/from-the-grill.jpg"
+                         data-srcset="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_400/v1537897003/website-template-3/from-the-grill.jpg 400w, https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537897003/website-template-3/from-the-grill.jpg 800w"
+                         alt="A la kart" class="lazyload">
+                </div>
+                <hr class="food-horizontal-rule">
+
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Piletina u gorgonzola sosu + pomfrit</span><span class="food-price float-right">1440</span></h3>
+                        <p class="food-ingredients">Piletina, pomfrit, gorgonzola sos</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Teleća šnicla milaneze + pomfrit</span><span class="food-price float-right">1580</span></h3>
+                        <p class="food-ingredients">District sos, teletina</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Pileći file saltim boca</span><span class="food-price float-right">1480</span></h3>
+                        <p class="food-ingredients">Pileći file, pršuta, mozzarela, belo vino, neut. pavlaka, soya sos, beli luk u ulju, pomfrit</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Pileći file kapreze</span><span class="food-price float-right">1380</span></h3>
+                        <p class="food-ingredients">Piletina, pesto sos, paradajz, mocarela, pomfrit</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Wok piletina</span><span class="food-price float-right">1280</span></h3>
+                        <p class="food-ingredients">Nudle, povrće, piletina, soja sos, vochester</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Wok Beef</span><span class="food-price float-right">2100</span></h3>
+                        <p class="food-ingredients">Nudle, povrće, biftek, soja sos, vochester</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Teleći medaljoni u sosu od pečuraka</span><span class="food-price float-right">2200</span></h3>
+                        <p class="food-ingredients">Teletina, šampinjoni, neut. pavlaka, vegis</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Biftek Stek</span><span class="food-price float-right">2700</span></h3>
+                        <p class="food-ingredients">Biftek, tost hleb, spajsi vegis</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Biftek sa vrganjima i taljatelama</span><span class="food-price float-right">3520</span></h3>
+                        <p class="food-ingredients">Biftek, taljatele, vrganj, demiglas, belo vino, puter</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Taljata od bifteka</span><span class="food-price float-right">3440</span></h3>
+                        <p class="food-ingredients">Biftek, tikvice, rukola, parmezan, cvetic</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Taljata od piletine</span><span class="food-price float-right">1320</span></h3>
+                        <p class="food-ingredients">Pileći file, šampinjoni, tikv, patl, crv.paprika, brokoli, rukola</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Piletina sa mlincima</span><span class="food-price float-right">1420</span></h3>
+                        <p class="food-ingredients">Pileći file, mlinci, kis. pavlaka, neut. pavlaka, gauda, puter</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Sotirana piletina sa šampinjonima i indijskim orahom</span><span class="food-price float-right">1490</span></h3>
+                        <p class="food-ingredients">Pileći file, šampinjoni, indi orah, neut. pavlaka, pršut, tost hleb, parmezan, puter</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+            </div>
+
+            <!-- ========== JELA SA ROŠTILJA ========== -->
+            <div id="rostilj" class="food-category">
+                <div class="category-header">
+                    <h2 class="banner">JELA SA ROŠTILJA</h2>
+                    <img data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537897003/website-template-3/from-the-grill.jpg"
+                         data-srcset="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_400/v1537897003/website-template-3/from-the-grill.jpg 400w, https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537897003/website-template-3/from-the-grill.jpg 800w"
+                         alt="Roštilj" class="lazyload">
+                </div>
+                <hr class="food-horizontal-rule">
+
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Roštiljska kobasica 250gr</span><span class="food-price float-right">990</span></h3>
+                        <p class="food-ingredients">Roštiljska kobasica, vegis, urnebes</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Pileće Belo 250 gr</span><span class="food-price float-right">1090</span></h3>
+                        <p class="food-ingredients">Pileće belo, pomfrit, cezar sos</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Pljeskavica District 250 gr</span><span class="food-price float-right">1360</span></h3>
+                        <p class="food-ingredients">Roštilj meso, kačkavalj, slanina, crv. paprika, spajsi vegis, kajmak, pita hleb</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Zapeceni ćevapi sa kajmakom 250gr</span><span class="food-price float-right">1280</span></h3>
+                        <p class="food-ingredients">Roštilj meso, spajsi vegis, kajmak</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Ćevapi District 250gr</span><span class="food-price float-right">1140</span></h3>
+                        <p class="food-ingredients">Roštilj meso, pita hleb, pomfrit, ćevap dip</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Uštipci 250 gr</span><span class="food-price float-right">1380</span></h3>
+                        <p class="food-ingredients">Roštilj meso, pomfrit, slanina, kačkavalj, crveni luk, ulje belog luka, tucana paprika, urnebes</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Grilovani svinjski vrat 350 gr</span><span class="food-price float-right">1380</span></h3>
+                        <p class="food-ingredients">Dimljeni vrat, urnebes dip, vegis</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Zapecena rebarca sa kajmakom 350 gr</span><span class="food-price float-right">1520</span></h3>
+                        <p class="food-ingredients">Rebarca meso, kajmak</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Kobasica kačkavalj 400 gr</span><span class="food-price float-right">1420</span></h3>
+                        <p class="food-ingredients">Kobasica kačkavalj, vegis, dizon senf dip</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Mešani mix od roštilja 800 gr</span><span class="food-price float-right">3300</span></h3>
+                        <p class="food-ingredients">Roštilja kobasica, svinjski vrat, pileći file, roštilj meso (ćevapi), uštipci, pomfrit, urnebes, kajmak</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+            </div>
+
+            <!-- ========== RIBE ========== -->
+            <div id="ribe" class="food-category">
+                <div class="category-header">
+                    <h2 class="banner">RIBE</h2>
+                    <img data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537897973/website-template-3/seafood.jpg"
+                         data-srcset="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_400/v1537897973/website-template-3/seafood.jpg 400w, https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537897973/website-template-3/seafood.jpg 800w"
+                         alt="Ribe" class="lazyload">
+                </div>
+                <hr class="food-horizontal-rule">
+
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">File lososa u terijaki sosu</span><span class="food-price float-right">2600</span></h3>
+                        <p class="food-ingredients">Losos, pirinač, rukola, ceri</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Tuna stek u vasabi sosu</span><span class="food-price float-right">2440</span></h3>
+                        <p class="food-ingredients">Tuna stek, grilovani ananas, vasabi sos</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">File dimljena pastrmka</span><span class="food-price float-right">1740</span></h3>
+                        <p class="food-ingredients">Dimljena pastrmka, restovani krompir, spanac</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+            </div>
+
+            <!-- ========== GUC I GRIC ========== -->
+            <div id="gric" class="food-category">
+                <div class="category-header">
+                    <h2 class="banner">GUC I GRIC</h2>
+                    <img data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537898377/website-template-3/vegetarian-meals.jpg"
+                         data-srcset="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_400/v1537898377/website-template-3/vegetarian-meals.jpg 400w, https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537898377/website-template-3/vegetarian-meals.jpg 800w"
+                         alt="Guc i Gric" class="lazyload">
+                </div>
+                <hr class="food-horizontal-rule">
+
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Tortilja chips</span><span class="food-price float-right">490</span></h3>
+                        <p class="food-ingredients">Tortilja chips, sos po izboru</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Mozzarela Sticks</span><span class="food-price float-right">610</span></h3>
+                        <p class="food-ingredients">Mozzarela sticks, sos po izboru</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Takitos</span><span class="food-price float-right">810</span></h3>
+                        <p class="food-ingredients">Takitos, sos po izboru</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Hrskavi pileći štapići</span><span class="food-price float-right">720</span></h3>
+                        <p class="food-ingredients">Pileći štapići, pomfrit, sos po izboru</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Onion rings</span><span class="food-price float-right">560</span></h3>
+                        <p class="food-ingredients">Onion rings, sos po izboru</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Pomfrit</span><span class="food-price float-right">410</span></h3>
+                        <p class="food-ingredients">Pomfrit, sos po izboru</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Veggies</span><span class="food-price float-right">440</span></h3>
+                        <p class="food-ingredients">Veggies krompir, sos po izboru</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+            </div>
+
+            <!-- ========== PECIVO ========== -->
+            <div id="pecivo" class="food-category">
+                <div class="category-header">
+                    <h2 class="banner">PECIVO</h2>
+                    <img data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537897508/website-template-3/pizzas.jpg"
+                         data-srcset="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_400/v1537897508/website-template-3/pizzas.jpg 400w, https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537897508/website-template-3/pizzas.jpg 800w"
+                         alt="Pecivo" class="lazyload">
+                </div>
+                <hr class="food-horizontal-rule">
+
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Kajzerica</span><span class="food-price float-right">100</span></h3>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Štapić</span><span class="food-price float-right">100</span></h3>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Štapić luk</span><span class="food-price float-right">100</span></h3>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Štapić integralni</span><span class="food-price float-right">100</span></h3>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12">
+                        <h3 class="food-title"><span class="food-name">Nafora</span><span class="food-price float-right">420</span></h3>
+                        <p class="food-ingredients">Tucana ljuta, ulje belog luka, peršun</p>
+                    </div>
+                </div>
+                <hr class="food-horizontal-rule">
+            </div>
+
+            <!-- ========== SOSEVI ========== -->
+            <div id="sosevi" class="food-category">
+                <div class="category-header">
+                    <h2 class="banner">SOSEVI</h2>
+                    <img data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537898110/website-template-3/specials.jpg"
+                         data-srcset="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_400/v1537898110/website-template-3/specials.jpg 400w, https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_800/v1537898110/website-template-3/specials.jpg 800w"
+                         alt="Sosevi" class="lazyload">
+                </div>
+                <hr class="food-horizontal-rule">
+
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><h3 class="food-title"><span class="food-name">Cezar</span><span class="food-price float-right">180</span></h3></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><h3 class="food-title"><span class="food-name">District sos</span><span class="food-price float-right">220</span></h3></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><h3 class="food-title"><span class="food-name">Slatko ljuti</span><span class="food-price float-right">190</span></h3></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><h3 class="food-title"><span class="food-name">Opako ljuti</span><span class="food-price float-right">190</span></h3></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><h3 class="food-title"><span class="food-name">BBQ</span><span class="food-price float-right">280</span></h3></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><h3 class="food-title"><span class="food-name">Meksički</span><span class="food-price float-right">190</span></h3></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><h3 class="food-title"><span class="food-name">Gvakamole</span><span class="food-price float-right">180</span></h3></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><h3 class="food-title"><span class="food-name">Majonez</span><span class="food-price float-right">50</span></h3></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><h3 class="food-title"><span class="food-name">Eskalibur</span><span class="food-price float-right">180</span></h3></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><h3 class="food-title"><span class="food-name">4 vrste sira</span><span class="food-price float-right">240</span></h3></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><h3 class="food-title"><span class="food-name">Gorgonzola</span><span class="food-price float-right">220</span></h3></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><h3 class="food-title"><span class="food-name">Cheddar sos</span><span class="food-price float-right">220</span></h3></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><h3 class="food-title"><span class="food-name">Senf</span><span class="food-price float-right">50</span></h3></div>
+                </div>
+                <hr class="food-horizontal-rule">
+                <div class="row align-items-center menu-item">
+                    <div class="col-md-12"><h3 class="food-title"><span class="food-name">Kechap</span><span class="food-price float-right">50</span></h3></div>
+                </div>
+                <hr class="food-horizontal-rule">
+            </div>
+
+        </div><!-- /food-descriptions -->
+
+        <!-- GOOGLE MAP -->
+        <div id="googleMapContainer" class="homepage-google-map">
+            <iframe title="Our location on Google Maps" class="google-map"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d471.4857047025106!2d20.46504975893008!3d44.79768249212041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2srs!4v1786375646944!5m2!1sen!2srs"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+</main>
+
+<footer class="page-footer">
+    <div class="container">
         <div class="row">
-
-          <div class="col-md-3">
-            <h5 class="page-footer-title">RADNO VREME</h5>
-            <p class="mb-0">Otvoreno svakog dana od 8h</p>
-            <p class="mb-0">Bar: Svakog dana od 8h - 00h</p>
-            <p class="mb-0">Doručak: Svakog dana od 8h - 11h</p>
-            <p class="mb-0">Ručak: Svakog dana od 12h - 15h</p>
-            <p>Večera: Svakog dana od 18h - 00h</p>
-          </div>
-
-          <div class="col-md-3 h-100 border-left-custom">
-            <h5 class="page-footer-title mt-3 mt-md-0">LOKACIJA</h5>
-            <address>
-              District 11 &amp; Brunch Bar<br>
-              Pasterova<br>
-              14b, Beograd, Srbija<br>
-              <abbr title="Telefon">P:</abbr> (+381) 063 555 345<br>
-              <abbr title="Imejl">E:</abbr> info@district11.rs
-            </address>
-          </div>
-
-          <div class="col-md-3 h-100 border-left-custom">
-            <h5 class="page-footer-title mt-3 mt-md-0">PRATITE NAS</h5>
-            <div class="mb-3">
-              <a class="footer-social" href="https://github.com/PictureElement" aria-label="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-              <a class="footer-social" href="https://github.com/PictureElement" aria-label="tripadvisor"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
-              <a class="footer-social" href="https://github.com/PictureElement" aria-label="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <div class="col-md-3">
+                <h5 class="page-footer-title">RADNO VREME</h5>
+                <p class="mb-0">Otvoreno svakog dana od 8h</p>
+                <p class="mb-0">Bar: Svakog dana od 8h - 00h</p>
+                <p class="mb-0">Doručak: Svakog dana od 8h - 11h</p>
+                <p class="mb-0">Ručak: Svakog dana od 12h - 15h</p>
+                <p>Večera: Svakog dana od 18h - 00h</p>
             </div>
-          </div>
-
-          <div class="col-md-3 h-100 border-left-custom">
-            <h5 class="page-footer-title mt-3 mt-md-0">BILTEN</h5>
-            <p>
-              Popunite formular kako biste dobijali informacije o najnovijim događajima,
-              vestima i posebnim ponudama restorana District 11.
-            </p>
-            <form id="newsletter-form">
-              <label class="sr-only" for="formEmail">Imejl</label>
-              <input type="email" class="form-control form-control-sm rounded" id="formEmail" placeholder="ime@primer.com">
-              <button type="submit" class="btn btn-sm btn-outline-light btn-block mt-2">Prijavi se</button>
-            </form>
-          </div>
-
+            <div class="col-md-3 h-100 border-left-custom">
+                <h5 class="page-footer-title mt-3 mt-md-0">LOKACIJA</h5>
+                <address>
+                    District 11 &amp; Brunch Bar<br>
+                    Pasterova 14b, Beograd, Srbija<br>
+                    <abbr title="Telefon">P:</abbr> (+381) 060 699 9024<br>
+                    <abbr title="Imejl">E:</abbr> info@district11.rs
+                </address>
+            </div>
+            <div class="col-md-3 h-100 border-left-custom">
+                <h5 class="page-footer-title mt-3 mt-md-0">PRATITE NAS</h5>
+                <div class="mb-3">
+                    <a class="footer-social" href="#" aria-label="facebook"><i class="fa fa-facebook"></i></a>
+                    <a class="footer-social" href="#" aria-label="tripadvisor"><i class="fa fa-tripadvisor"></i></a>
+                    <a class="footer-social" href="#" aria-label="instagram"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-md-3 h-100 border-left-custom">
+                <h5 class="page-footer-title mt-3 mt-md-0">BILTEN</h5>
+                <p>Popunite formular kako biste dobijali informacije o najnovijim događajima, vestima i posebnim ponudama restorana District 11.</p>
+                <form id="newsletter-form">
+                    <label class="sr-only" for="formEmail">Imejl</label>
+                    <input type="email" class="form-control form-control-sm rounded" id="formEmail" placeholder="ime@primer.com">
+                    <button type="submit" class="btn btn-sm btn-outline-light btn-block mt-2">Prijavi se</button>
+                </form>
+            </div>
         </div>
-      </div>
-
-      <div class="page-footer-copyright container-fluid text-center">
+    </div>
+    <div class="page-footer-copyright container-fluid text-center">
         © 2026 District 11 Brunch Bar &amp; Restaurant. Sva prava zadržana.<br>
-        Dizajn i razvoj: <a href="https://pictureelement.github.io/portfolio-2/">PictureElement</a> (Marios Sofokleous) i <a href="https://github.com/FilipAtanasovski-dev">Filip Atanasovski</a>.
-      </div>
-    </footer>
-    <a id="back-to-top" class="back-to-top smooth-scroll" href="#top">
-      <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
-    </a>
-    <!-- lazySizes -->
-    <script src="../js/lazysizes.min.js" async=""></script>
-    <!-- jQuery -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous">
+        Dizajn i razvoj: <a href="https://pictureelement.github.io/portfolio-2/">PictureElement</a> i <a href="https://github.com/FilipAtanasovski-dev">Filip Atanasovski</a>.
+    </div>
+</footer>
+
+<a id="back-to-top" class="back-to-top smooth-scroll" href="#top">
+    <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+</a>
+
+<!-- lazySizes -->
+<script src="../js/lazysizes.min.js" async=""></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+</script>
+<!-- Bootstrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
+<script src="../js/site.js"></script>
+<script src="../js/menu-animations.js"></script>
+    <script>
+    document
+        .getElementById("newsletter-form")
+        .addEventListener("submit", async function (event) {
+
+            event.preventDefault();
+
+            const emailInput =
+                document.getElementById("formEmail");
+
+            const email =
+                emailInput.value.trim();
+
+            // Basic client-side validation
+            const emailRegex =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailRegex.test(email)) {
+
+                alert("Please enter a valid email address.");
+
+                emailInput.focus();
+
+                return;
+            }
+
+            try {
+
+                const response = await fetch(
+                    "http://127.0.0.1:8000/api/newsletter",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+
+                        body: JSON.stringify({
+                            email: email
+                        })
+                    }
+                );
+
+                const data =
+                    await response.json();
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        data.detail ||
+                        "Something went wrong."
+                    );
+                }
+
+                alert(data.message);
+
+                emailInput.value = "";
+
+            } catch (error) {
+
+                console.error(
+                    "Newsletter subscription error:",
+                    error
+                );
+
+                alert(
+                    error.message ||
+                    "Unable to subscribe to the newsletter."
+                );
+            }
+        });
     </script>
-    <!-- Bootstrap -->
-    <script 
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
-      crossorigin="anonymous">
-    </script>
-    <script src="../js/site.js"></script>
-    <script src="../js/menu-animations.js"></script>
-  </body>
+  </body> 
 </html>

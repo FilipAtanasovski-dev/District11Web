@@ -138,7 +138,7 @@
                   District 11  &amp; Brunch Bar<br>
                   Pasterova<br>
                   14b, Beograd, Srbija<br>
-                  <abbr title="Phone">P:</abbr> (+381) 063 555 345<br>
+                  <abbr title="Phone">P:</abbr> (+381) 060 699 9024<br>
                   <abbr title="Email">E:</abbr> info@district11.rs
                 </address>
               </div>
@@ -193,7 +193,7 @@
               District 11  &amp; Brunch Bar<br>
               Pasterova<br>
               14b, Beograd, Srbija<br>
-              <abbr title="Phone">P:</abbr> (+381) 063 555 345<br>
+              <abbr title="Phone">P:</abbr> (+381) 060 699 9024<br>
               <abbr title="Email">E:</abbr> info@district11.rs
             </address>
           </div>
@@ -241,5 +241,77 @@
     </script>
     <script src="../js/site.js"></script>
     <script src="../js/contact-animations.js"></script>
-  </body>
+      <script>
+    document
+        .getElementById("newsletter-form")
+        .addEventListener("submit", async function (event) {
+
+            event.preventDefault();
+
+            const emailInput =
+                document.getElementById("formEmail");
+
+            const email =
+                emailInput.value.trim();
+
+            // Basic client-side validation
+            const emailRegex =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailRegex.test(email)) {
+
+                alert("Please enter a valid email address.");
+
+                emailInput.focus();
+
+                return;
+            }
+
+            try {
+
+                const response = await fetch(
+                    "http://127.0.0.1:8000/api/newsletter",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+
+                        body: JSON.stringify({
+                            email: email
+                        })
+                    }
+                );
+
+                const data =
+                    await response.json();
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        data.detail ||
+                        "Something went wrong."
+                    );
+                }
+
+                alert(data.message);
+
+                emailInput.value = "";
+
+            } catch (error) {
+
+                console.error(
+                    "Newsletter subscription error:",
+                    error
+                );
+
+                alert(
+                    error.message ||
+                    "Unable to subscribe to the newsletter."
+                );
+            }
+        });
+    </script>
+  </body> 
 </html>
